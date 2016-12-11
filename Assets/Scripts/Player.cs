@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 
     public float speed = 10f;
     public float braking = 0.9f;
+    public float pickupDistance = 2.0f;
 
     public void Start()
     {
@@ -47,15 +48,23 @@ public class Player : MonoBehaviour
     }
 
     // Raycast from the screen position down into the world and see if the
-    // player clicked on an ingredient station.
+    // player clicked on an ingredient station. If the station is too far away
+    // then it will not be returned.
     private IngredientStation ClickOnStation()
     {
         var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var hit = Physics2D.Raycast(position, Vector2.zero);
 
-        if (hit.collider)
+        if (hit.collider &&
+            hit.collider.GetComponent<IngredientStation>())
         {
-            return hit.collider.GetComponent<IngredientStation>();
+            var distance = Vector3.Distance(
+                this.transform.position, hit.collider.transform.position);
+
+            if (distance < this.pickupDistance)
+            {
+                return hit.collider.GetComponent<IngredientStation>();
+            }
         }
 
         return null;
