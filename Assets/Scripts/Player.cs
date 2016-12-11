@@ -52,8 +52,11 @@ public class Player : MonoBehaviour
             if (container != null)
             {
                 container.Interact(hand);
+                return;
             }
         }
+
+        hand.Discard();
     }
 
     private T ClickOnContainer<T>()

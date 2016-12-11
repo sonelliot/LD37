@@ -19,6 +19,12 @@ public class Hand : MonoBehaviour
             m_renderer.enabled = true;
             m_renderer.color = ingredient.GetColor();
         }
+        else if (this.thing is Potion)
+        {
+            var potion = (Potion)this.thing;
+            m_renderer.enabled = true;
+            m_renderer.color = potion.GetColor();
+        }
         else
         {
             m_renderer.color = Color.white;
@@ -51,5 +57,10 @@ public class Hand : MonoBehaviour
         var thing = this.thing;
         this.thing = null;
         return (T)thing;
+    }
+
+    public bool Holding<T>()
+    {
+        return this.thing is T;
     }
 }

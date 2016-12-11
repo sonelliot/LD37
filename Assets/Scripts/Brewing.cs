@@ -17,6 +17,11 @@ public class Brewing : MonoBehaviour
         get { return Progress > 1f + this.tolerance; }
     }
 
+    public bool IsDone
+    {
+        get { return Progress >= 1f; }
+    }
+
     public float Progress
     {
         get

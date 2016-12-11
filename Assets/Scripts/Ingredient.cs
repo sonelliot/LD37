@@ -15,10 +15,10 @@ public static class IngredientExtensions
     {
         switch (ingredient)
         {
-            case Ingredient.Red:     return new Color(1.00f, 0.50f, 0.50f);
-            case Ingredient.Green:   return new Color(0.52f, 0.74f, 0.37f);
-            case Ingredient.Blue:    return new Color(0.41f, 0.67f, 0.83f);
-            case Ingredient.Purple:  return new Color(0.83f, 0.41f, 0.75f);
+            case Ingredient.Red:     return Colors.red;
+            case Ingredient.Green:   return Colors.green;
+            case Ingredient.Blue:    return Colors.blue;
+            case Ingredient.Purple:  return Colors.purple;
 
             case Ingredient.None:
             default:

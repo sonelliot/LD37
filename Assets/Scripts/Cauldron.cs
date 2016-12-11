@@ -7,6 +7,7 @@ public class Cauldron : MonoBehaviour, IContainer
 {
     private RecipeBook m_recipeBook;
     private Brewing m_brewing;
+    private GameObject m_itemGO;
     public List<Ingredient> ingredients;
 
     public void Start()
@@ -15,12 +16,29 @@ public class Cauldron : MonoBehaviour, IContainer
             .GetComponent<RecipeBook>();
 
         m_brewing = GetComponent<Brewing>();
+
+        m_itemGO = transform.Find("Item").gameObject;
     }
 
     public void Update()
     {
         UpdateIngredients();
+        UpdateItem();
         UpdateCooking();
+    }
+
+    private void UpdateItem()
+    {
+        if (m_brewing.IsDone)
+        {
+            m_itemGO.SetActive(true);
+            var renderer = m_itemGO.GetComponent<SpriteRenderer>();
+            renderer.color = m_brewing.recipe.potion.GetColor();
+        }
+        else
+        {
+            m_itemGO.SetActive(false);
+        }
     }
 
     private void UpdateCooking()
@@ -57,7 +75,7 @@ public class Cauldron : MonoBehaviour, IContainer
             var ingredient = this.ingredients
                 .ElementAtOrDefault(i);
 
-            if (ingredient == Ingredient.None)
+            if (ingredient == Ingredient.None || m_brewing.IsDone)
             {
                 renderer.enabled = false;
             }
@@ -76,9 +94,17 @@ public class Cauldron : MonoBehaviour, IContainer
 
     public void Interact(Hand hand)
     {
-        if (!IsFull && hand.IsFull)
+        if (!IsFull && hand.IsFull && hand.Holding<Ingredient>())
         {
             this.ingredients.Add(hand.Give<Ingredient>());
+        }
+
+        if (m_brewing.IsDone && !hand.IsFull)
+        {
+            hand.Pickup(m_brewing.recipe.potion);
+
+            m_brewing.Stop();
+            this.ingredients.Clear();
         }
     }
 }
