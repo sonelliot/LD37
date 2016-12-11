@@ -3,6 +3,7 @@ using System.Collections;
 
 public enum Potion
 {
+    Unknown,
     HealthPotion,
     ManaPotion,
     StaminaPotion,

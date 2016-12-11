@@ -44,7 +44,8 @@ public class Player : MonoBehaviour
         var containers = new IContainer[]
         {
             ClickOnContainer<IngredientStation>(),
-            ClickOnContainer<Cauldron>()
+            ClickOnContainer<Cauldron>(),
+            ClickOnContainer<RequestChest>()
         };
 
         foreach (var container in containers)
