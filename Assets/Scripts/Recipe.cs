@@ -7,6 +7,7 @@ public class Recipe : MonoBehaviour
     private Dictionary<Ingredient, int> m_count;
     public Potion potion;
     public Ingredient[] ingredients;
+    public float duration;
 
     public void Start()
     {

@@ -6,12 +6,15 @@ using System.Linq;
 public class Cauldron : MonoBehaviour, IContainer
 {
     private RecipeBook m_recipeBook;
+    private Brewing m_brewing;
     public List<Ingredient> ingredients;
 
     public void Start()
     {
         m_recipeBook = GameObject.Find("Recipe Book")
             .GetComponent<RecipeBook>();
+
+        m_brewing = GetComponent<Brewing>();
     }
 
     public void Update()
@@ -25,13 +28,16 @@ public class Cauldron : MonoBehaviour, IContainer
         if (IsFull)
         {
             var recipe = m_recipeBook.Match(this.ingredients);
-            if (recipe != null)
+            if (recipe != null &&
+                m_brewing.InProgress == false ||
+                m_brewing.IsBurnt == false)
             {
-                // do cooking
+                m_brewing.Begin(recipe);
             }
             else
             {
                 this.ingredients.Clear();
+                m_brewing.Stop();
             }
         }
     }

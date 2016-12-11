@@ -1200,6 +1200,7 @@ GameObject:
   - 212: {fileID: 1502080165}
   - 61: {fileID: 1502080164}
   - 114: {fileID: 1502080167}
+  - 114: {fileID: 1502080168}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Untagged
@@ -1284,6 +1285,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients: 
+--- !u!114 &1502080168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502080163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fbcda505492df743806a0053ddf4156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipe: {fileID: 0}
+  tolerance: 0.25
 --- !u!1 &1503331304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potion: 3
   ingredients: 04000000040000000400000004000000
+  duration: 10
 --- !u!114 &1682058612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,6 +1554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potion: 2
   ingredients: 02000000020000000200000002000000
+  duration: 10
 --- !u!114 &1682058613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,6 +1568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potion: 1
   ingredients: 03000000030000000300000003000000
+  duration: 10
 --- !u!114 &1682058614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,6 +1582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potion: 0
   ingredients: 01000000010000000100000001000000
+  duration: 10
 --- !u!114 &1682058615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1635,7 +1653,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
-  m_Color: {r: 0.7647059, g: 0.49461582, b: 0.23995945, a: 1}
+  m_Color: {r: 0.9411765, g: 0.665744, b: 0.29533476, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1 &1871544533
@@ -1801,6 +1819,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
-  m_Color: {r: 0.7647059, g: 0.6059092, b: 0.45618665, a: 1}
+  m_Color: {r: 0.553, g: 0.44321322, b: 0.29556894, a: 0.709}
   m_FlipX: 0
   m_FlipY: 0
