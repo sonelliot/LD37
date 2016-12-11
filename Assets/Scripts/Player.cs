@@ -4,15 +4,64 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D m_body;
+    private Hand m_left;
+    private Hand m_right;
+
     public float speed = 10f;
     public float braking = 0.9f;
 
-    public void Awake()
+    public void Start()
     {
         m_body = GetComponent<Rigidbody2D>();
+
+        var hands = GetComponentsInChildren<Hand>();
+        m_left  = hands[0];
+        m_right = hands[1];
     }
 
     public void Update()
+    {
+        UpdateMovement();
+        UpdateHands();
+    }
+
+    private void UpdateHands()
+    {
+        if (Input.GetMouseButtonDown(0)) // left
+        {
+            var station = ClickOnStation();
+            if (station)
+            {
+                m_left.Pickup(station.ingredient);
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1)) // right
+        {
+            var station = ClickOnStation();
+            if (station)
+            {
+                m_right.Pickup(station.ingredient);
+            }
+        }
+    }
+
+    // Raycast from the screen position down into the world and see if the
+    // player clicked on an ingredient station.
+    private IngredientStation ClickOnStation()
+    {
+        var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var hit = Physics2D.Raycast(position, Vector2.zero);
+
+        if (hit.collider)
+        {
+            return hit.collider.GetComponent<IngredientStation>();
+        }
+
+        return null;
+    }
+
+    private void UpdateMovement()
     {
         var h = Input.GetAxis("Horizontal");
         var v = Input.GetAxis("Vertical");

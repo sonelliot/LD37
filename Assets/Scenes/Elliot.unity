@@ -176,6 +176,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 244067150}
   - 212: {fileID: 244067149}
+  - 61: {fileID: 244067151}
+  - 114: {fileID: 244067152}
   m_Layer: 0
   m_Name: Ingredient Station (Blue)
   m_TagString: Untagged
@@ -229,6 +231,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!61 &244067151
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244067148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+--- !u!114 &244067152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244067148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435522e294aa12f4e85ebffde5beca7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredient: 2
 --- !u!1 &395171535
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +498,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &852622337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 852622338}
+  - 212: {fileID: 852622339}
+  - 114: {fileID: 852622340}
+  m_Layer: 0
+  m_Name: Right Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &852622338
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 852622337}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.45, y: -0.57, z: 0}
+  m_LocalScale: {x: 0.4999999, y: 0.33333334, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1485651356}
+  m_RootOrder: 1
+--- !u!212 &852622339
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 852622337}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!114 &852622340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 852622337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7984976d9f0d64f8efa6274b99cc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &969493054
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +581,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 969493056}
   - 212: {fileID: 969493055}
+  - 61: {fileID: 969493057}
+  - 114: {fileID: 969493058}
   m_Layer: 0
   m_Name: Ingredient Station (Green)
   m_TagString: Untagged
@@ -532,6 +636,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!61 &969493057
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969493054}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+--- !u!114 &969493058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969493054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435522e294aa12f4e85ebffde5beca7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredient: 1
 --- !u!1 &1160351280
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +810,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1344156194}
   - 212: {fileID: 1344156193}
+  - 61: {fileID: 1344156195}
+  - 114: {fileID: 1344156196}
   m_Layer: 0
   m_Name: Ingredient Station (Purple)
   m_TagString: Untagged
@@ -733,6 +865,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!61 &1344156195
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344156192}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+--- !u!114 &1344156196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344156192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435522e294aa12f4e85ebffde5beca7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredient: 3
 --- !u!1 &1485651354
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +940,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
-  m_Color: {r: 0.75962603, g: 0.41926977, b: 0.7647059, a: 1}
+  m_Color: {r: 1, g: 0.9055, b: 0.541, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &1485651356
@@ -795,7 +953,9 @@ Transform:
   m_LocalPosition: {x: 2.03, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.45, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 1530214498}
+  - {fileID: 852622338}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!114 &1485651357
@@ -839,9 +999,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.43123785}
+  m_Offset: {x: 0, y: -0.6228992}
   serializedVersion: 2
-  m_Size: {x: 2.5599997, y: 1.6975245}
+  m_Size: {x: 2.5599997, y: 1.3142033}
 --- !u!1 &1503331304
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +1011,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1503331305}
   - 212: {fileID: 1503331306}
+  - 61: {fileID: 1503331307}
+  - 114: {fileID: 1503331308}
   m_Layer: 0
   m_Name: Ingredient Station (Red)
   m_TagString: Untagged
@@ -904,6 +1066,106 @@ SpriteRenderer:
   m_Color: {r: 1, g: 0.49699998, b: 0.49699998, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!61 &1503331307
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1503331304}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.56}
+--- !u!114 &1503331308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1503331304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435522e294aa12f4e85ebffde5beca7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredient: 0
+--- !u!1 &1530214497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1530214498}
+  - 212: {fileID: 1530214499}
+  - 114: {fileID: 1530214500}
+  m_Layer: 0
+  m_Name: Left Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1530214498
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1530214497}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.44, y: -0.57, z: 0}
+  m_LocalScale: {x: 0.49999997, y: 0.33333337, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1485651356}
+  m_RootOrder: 0
+--- !u!212 &1530214499
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1530214497}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!114 &1530214500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1530214497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7984976d9f0d64f8efa6274b99cc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1628327956
 GameObject:
   m_ObjectHideFlags: 0
