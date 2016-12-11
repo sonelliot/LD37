@@ -2,6 +2,7 @@ using UnityEngine;
 
 public enum Ingredient
 {
+    None,
     Red,
     Green,
     Blue,
@@ -18,7 +19,10 @@ public static class IngredientExtensions
             case Ingredient.Green:   return new Color(0.52f, 0.74f, 0.37f);
             case Ingredient.Blue:    return new Color(0.41f, 0.67f, 0.83f);
             case Ingredient.Purple:  return new Color(0.83f, 0.41f, 0.75f);
-            default:                 return Color.white;
+
+            case Ingredient.None:
+            default:
+                return Color.white;
         }
     }
 }

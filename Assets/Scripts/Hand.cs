@@ -36,6 +36,16 @@ public class Hand : MonoBehaviour
         this.thing = thing;
     }
 
+    public bool IsFull
+    {
+        get { return this.thing != null; }
+    }
+
+    public bool IsEmpty
+    {
+        get { return this.thing == null; }
+    }
+
     public T Give<T>()
     {
         var thing = this.thing;
