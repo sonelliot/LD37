@@ -1,0 +1,13 @@
+* Todo
+** Prototype 
+*** TODO Need a room
+*** TODO Need villagers to come and request stuff
+*** TODO Need to be able to explore room
+*** TODO Need to be able to read books
+*** TODO Need to be able to brew potions
+*** TODO Need an ingredient store
+*** TODO Need a timer
+*** TODO You get negative approval if the task expires or you stuff it up
+*** TODO You get positive approval if you complete the task with no mistakes
+*** TODO You win the game if you survive X days
+*** TODO You lose the game if approval gets too low (linched)
