@@ -28,42 +28,49 @@ public class Player : MonoBehaviour
 
     private void UpdateHands()
     {
-        if (Input.GetMouseButtonDown(0)) // left
+        if (Input.GetMouseButtonDown(0))
         {
-            var station = ClickOnStation();
-            if (station)
-            {
-                m_left.Pickup(station.ingredient);
-            }
+            UpdateHand(m_left);
         }
 
-        if (Input.GetMouseButtonDown(1)) // right
+        if (Input.GetMouseButtonDown(1))
         {
-            var station = ClickOnStation();
-            if (station)
+            UpdateHand(m_right);
+        }
+    }
+
+    private void UpdateHand(Hand hand)
+    {
+        var containers = new IContainer[]
+        {
+            ClickOnContainer<IngredientStation>(),
+            ClickOnContainer<Cauldron>()
+        };
+
+        foreach (var container in containers)
+        {
+            if (container != null)
             {
-                m_right.Pickup(station.ingredient);
+                container.Interact(hand);
             }
         }
     }
 
-    // Raycast from the screen position down into the world and see if the
-    // player clicked on an ingredient station. If the station is too far away
-    // then it will not be returned.
-    private IngredientStation ClickOnStation()
+    private T ClickOnContainer<T>()
+        where T: class, IContainer
     {
         var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var hit = Physics2D.Raycast(position, Vector2.zero);
 
-        if (hit.collider &&
-            hit.collider.GetComponent<IngredientStation>())
+        if (hit.collider != null &&
+            hit.collider.GetComponent<T>() != null)
         {
             var distance = Vector3.Distance(
                 this.transform.position, hit.collider.transform.position);
 
             if (distance < this.pickupDistance)
             {
-                return hit.collider.GetComponent<IngredientStation>();
+                return hit.collider.GetComponent<T>();
             }
         }
 

@@ -16,12 +16,30 @@ public class Hand : MonoBehaviour
         if (this.thing is Ingredient)
         {
             var ingredient = (Ingredient)this.thing;
+            m_renderer.enabled = true;
             m_renderer.color = ingredient.GetColor();
         }
+        else
+        {
+            m_renderer.color = Color.white;
+            m_renderer.enabled = false;
+        }
+    }
+
+    public void Discard()
+    {
+        this.thing = null;
     }
 
     public void Pickup(object thing)
     {
         this.thing = thing;
+    }
+
+    public T Give<T>()
+    {
+        var thing = this.thing;
+        this.thing = null;
+        return (T)thing;
     }
 }
