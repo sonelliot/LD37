@@ -29,6 +29,7 @@ public class Brewing : MonoBehaviour
     public void Begin(Recipe recipe)
     {
         this.recipe = recipe;
+        m_elapsed = 0.0001f;
     }
 
     public void Stop()

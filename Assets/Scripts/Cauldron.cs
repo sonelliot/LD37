@@ -28,13 +28,17 @@ public class Cauldron : MonoBehaviour, IContainer
         if (IsFull)
         {
             var recipe = m_recipeBook.Match(this.ingredients);
-            if (recipe != null &&
-                m_brewing.InProgress == false ||
-                m_brewing.IsBurnt == false)
+            if (recipe != null && !m_brewing.InProgress)
             {
                 m_brewing.Begin(recipe);
             }
-            else
+
+            if (recipe == null)
+            {
+                this.ingredients.Clear();
+            }
+
+            if (m_brewing.InProgress && m_brewing.IsBurnt)
             {
                 this.ingredients.Clear();
                 m_brewing.Stop();
