@@ -5,9 +5,38 @@ using System.Linq;
 
 public class Cauldron : MonoBehaviour, IContainer
 {
+    private RecipeBook m_recipeBook;
     public List<Ingredient> ingredients;
 
+    public void Start()
+    {
+        m_recipeBook = GameObject.Find("Recipe Book")
+            .GetComponent<RecipeBook>();
+    }
+
     public void Update()
+    {
+        UpdateIngredients();
+        UpdateCooking();
+    }
+
+    private void UpdateCooking()
+    {
+        if (IsFull)
+        {
+            var recipe = m_recipeBook.Match(this.ingredients);
+            if (recipe != null)
+            {
+                // do cooking
+            }
+            else
+            {
+                this.ingredients.Clear();
+            }
+        }
+    }
+
+    private void UpdateIngredients()
     {
         for (var i = 0; i < 4; i++)
         {
