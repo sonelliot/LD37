@@ -559,7 +559,6 @@ GameObject:
   - 114: {fileID: 1485651357}
   - 50: {fileID: 1485651358}
   - 61: {fileID: 1485651359}
-  - 247: {fileID: 1485651360}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -595,7 +594,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
   m_Color: {r: 0.75962603, g: 0.41926977, b: 0.7647059, a: 1}
   m_FlipX: 0
@@ -624,6 +623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a911849c28bacb4185a6dabb0bb6f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 30
+  braking: 0.9
 --- !u!50 &1485651358
 Rigidbody2D:
   serializedVersion: 2
@@ -632,9 +633,9 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1485651354}
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 2
+  m_LinearDrag: 3.2
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -652,19 +653,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.43123785}
   serializedVersion: 2
-  m_Size: {x: 2.5599997, y: 2.56}
---- !u!247 &1485651360
-ConstantForce2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1485651354}
-  m_Enabled: 1
-  m_Force: {x: 0, y: 0}
-  m_RelativeForce: {x: 1, y: 0}
-  m_Torque: 0
+  m_Size: {x: 2.5599997, y: 1.6975245}
 --- !u!1 &1628327956
 GameObject:
   m_ObjectHideFlags: 0
