@@ -1,6 +1,7 @@
 * Todo
 ** Prototype 
-*** TODO Need a room
+*** DONE Need a room
+    CLOSED: [2016-12-11 Sun 09:27]
 *** TODO Need villagers to come and request stuff
 *** TODO Need to be able to explore room
 *** TODO Need to be able to read books
