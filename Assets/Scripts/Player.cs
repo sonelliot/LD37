@@ -57,7 +57,10 @@ public class Player : MonoBehaviour
             }
         }
 
-        hand.Discard();
+        if (hand.Holding<Ingredient>())
+        {
+            hand.Discard();
+        }
     }
 
     private T ClickOnContainer<T>()
