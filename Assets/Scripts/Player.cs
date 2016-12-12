@@ -22,6 +22,11 @@ public class Player : MonoBehaviour
     public AudioSource hurt;
 
     public float speed = 10f;
+    public float maximumSpeed = 20f;
+
+    public float currentBrewing = 1f;
+    public float maximumBrewing = 2f;
+
     public float braking = 0.9f;
 
     public int currentHealth = 3;
@@ -46,6 +51,17 @@ public class Player : MonoBehaviour
     public void Heal(int amount)
     {
         Health += amount;
+    }
+
+    public void Boost(float amount)
+    {
+        this.speed = Mathf.Min(this.speed + amount, this.maximumSpeed);
+    }
+
+    public void BrewSpeed(float amount)
+    {
+        this.currentBrewing = Mathf.Min(
+            this.currentBrewing + amount, this.maximumBrewing);
     }
 
     public void Start()

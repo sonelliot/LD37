@@ -1124,6 +1124,11 @@ Prefab:
       propertyPath: put
       value: 
       objectReference: {fileID: 416181242}
+    - target: {fileID: 114000010539593184, guid: 95a4e3184dcd0764db1fe0036533bceb,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1485651357}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95a4e3184dcd0764db1fe0036533bceb, type: 2}
   m_IsPrefabParent: 0
@@ -2375,6 +2380,9 @@ MonoBehaviour:
   gulp: {fileID: 45219033}
   hurt: {fileID: 1756929432}
   speed: 30
+  maximumSpeed: 60
+  currentBrewing: 1
+  maximumBrewing: 2
   braking: 0.9
   currentHealth: 6
   maximumHealth: 6
@@ -3375,6 +3383,11 @@ Prefab:
       value: 
       objectReference: {fileID: 416181242}
     - target: {fileID: 114000012449082230, guid: 95a4e3184dcd0764db1fe0036533bceb,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1485651357}
+    - target: {fileID: 114000010539593184, guid: 95a4e3184dcd0764db1fe0036533bceb,
         type: 2}
       propertyPath: player
       value: 

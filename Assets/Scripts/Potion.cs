@@ -35,6 +35,12 @@ public static class PotionExtensions
             case Potion.HealthPotion:
                 player.Heal(1);
                 break;
+            case Potion.SpeedPotion:
+                player.Boost(5f);
+                break;
+            case Potion.MagicPotion:
+                player.BrewSpeed(0.2f);
+                break;
             default:
                 // nothing!
                 break;

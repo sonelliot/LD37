@@ -7,6 +7,7 @@ public class Brewing : MonoBehaviour
     public Recipe recipe;
     public float burnFactor = 0.4f;
     public float burningFactor = 0.15f;
+    public Player player;
 
     public bool InProgress
     {
@@ -64,7 +65,16 @@ public class Brewing : MonoBehaviour
     {
         if (this.recipe != null)
         {
-            m_elapsed += Time.deltaTime;
+            var brewFactor = this.player.currentBrewing;
+
+            if (!IsDone)
+            {
+                m_elapsed += brewFactor * Time.deltaTime;
+            }
+            else
+            {
+                m_elapsed += Time.deltaTime;
+            }
         }
     }
 }
