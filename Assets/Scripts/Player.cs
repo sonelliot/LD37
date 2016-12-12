@@ -111,25 +111,33 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (hand.Holding<Ingredient>())
+        if (m_hit.collider != null &&
+            m_hit.collider.GetComponent<Player>())
         {
-            hand.Discard();
-            this.dropIngredient.Play();
-        }
+            if (hand.Holding<Ingredient>())
+            {
+                hand.Discard();
+                this.dropIngredient.Play();
+            }
 
-        if (hand.Holding<Potion>())
-        {
-            hand.Discard();
-            this.dropPotion.Play();
+            if (hand.Holding<Potion>())
+            {
+                hand.Discard();
+                this.dropPotion.Play();
+            }
         }
     }
 
     private void UpdateHandSecondary(Hand hand)
     {
-        if (hand.Holding<Potion>())
+        if (m_hit.collider != null &&
+            m_hit.collider.GetComponent<Player>())
         {
-            hand.Give<Potion>().Apply(this);
-            this.gulp.Play();
+            if (hand.Holding<Potion>())
+            {
+                hand.Give<Potion>().Apply(this);
+                this.gulp.Play();
+            }
         }
     }
 
