@@ -60,7 +60,7 @@ public class Request : MonoBehaviour
             var ingredient = this.recipe.ingredients
                 .ElementAtOrDefault(i);
 
-            renderer.color = ingredient.GetColor();
+            renderer.sprite = IngredientSprites.Lookup(ingredient);
         }
     }
 }

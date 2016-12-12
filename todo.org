@@ -12,26 +12,22 @@
 *** TODO You win the game if you survive X days
 *** TODO You lose the game if approval gets too low (linched)
 ** Finish It!
-*** TODO Background Music (creative commons)
-*** TODO Sound effects (creative commons / peter?)
+*** DONE Background Music (creative commons)
+    CLOSED: [2016-12-12 Mon 21:17]
+*** DONE Sound effects (creative commons / peter?)
+    CLOSED: [2016-12-12 Mon 21:17]
 *** TODO Start & Restart Game Menu
 *** TODO Submit with Tutorial & Write-Up
 *** TODO Box Art
 *** TODO Proper UI Scaling
 *** DONE Proper Depth Sorting
     CLOSED: [2016-12-12 Mon 14:38]
-*** TODO Integrate all art assets
+*** DONE Integrate all art assets
+    CLOSED: [2016-12-12 Mon 21:17]
 *** TODO Graphical polish
 *** TODO Tuning and balancing
 *** DONE Mixing potions
     CLOSED: [2016-12-12 Mon 11:31]
-*** TODO Create the levels
-**** TODO Level - Tutorial
-**** TODO Level - Brew Plain Potions (2 types)
-**** TODO Level - Brew More Plain Potions (4 types)
-**** TODO Level - Brew Mixed Potions (6 types)
-**** TODO Level - Brew Hard (all types)
-**** TODO Level - Brew Insanely Hard (all types - fast)
 *** TODO Feedback (juiciness):
 **** TODO When request complete
 **** TODO When player walks
