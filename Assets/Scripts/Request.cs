@@ -9,6 +9,11 @@ public class Request : MonoBehaviour
     public float timeout = 60f;
     public float elapsed = 0f;
 
+    public bool IsExpired
+    {
+        get { return this.elapsed >= this.timeout; }
+    }
+
     public float Progress
     {
         get { return this.elapsed / this.timeout; }

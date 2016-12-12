@@ -16,4 +16,10 @@ public class RecipeBook : MonoBehaviour
     {
         return m_recipes.FirstOrDefault(r => r.IsMatch(ingredients));
     }
+
+    public Recipe Random()
+    {
+        int i = new System.Random().Next(0, m_recipes.Count);
+        return m_recipes[i];
+    }
 }
