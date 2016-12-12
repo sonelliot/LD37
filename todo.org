@@ -1,5 +1,5 @@
 * Todo
-** Prototype 
+** Prototype (old)
 *** TODO Need a room
 *** TODO Need villagers to come and request stuff
 *** TODO Need to be able to explore room
@@ -11,3 +11,22 @@
 *** TODO You get positive approval if you complete the task with no mistakes
 *** TODO You win the game if you survive X days
 *** TODO You lose the game if approval gets too low (linched)
+** Finish It!
+*** TODO Background Music (creative commons)
+*** TODO Sound effects (creative commons / peter?)
+*** TODO Start & Restart Game Menu
+*** TODO Submit with Tutorial & Write-Up
+*** TODO Box Art
+*** TODO Proper UI Scaling
+*** TODO Proper Depth Sorting
+*** TODO Integrate all art assets
+*** TODO Graphical polish
+*** TODO Tuning and balancing
+*** TODO Mixing potions
+*** TODO Create the levels
+*** TODO Feedback (juiciness):
+**** TODO When request complete
+**** TODO When player walks
+**** TODO When placing items in chests and picking up
+**** TODO When potion about to burn
+**** TODO When cauldron rejects recipe (spits out)
