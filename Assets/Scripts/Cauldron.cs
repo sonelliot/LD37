@@ -75,7 +75,7 @@ public class Cauldron : MonoBehaviour, IContainer
             var ingredient = this.ingredients
                 .ElementAtOrDefault(i);
 
-            if (ingredient == Ingredient.None || m_brewing.IsDone)
+            if (ingredient == Ingredient.Unknown || m_brewing.IsDone)
             {
                 renderer.enabled = false;
             }

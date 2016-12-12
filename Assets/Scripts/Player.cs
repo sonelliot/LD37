@@ -45,7 +45,8 @@ public class Player : MonoBehaviour
         {
             ClickOnContainer<IngredientStation>(),
             ClickOnContainer<Cauldron>(),
-            ClickOnContainer<RequestChest>()
+            ClickOnContainer<RequestChest>(),
+            ClickOnContainer<MixingTable>()
         };
 
         foreach (var container in containers)
