@@ -18,7 +18,8 @@
 *** TODO Submit with Tutorial & Write-Up
 *** TODO Box Art
 *** TODO Proper UI Scaling
-*** TODO Proper Depth Sorting
+*** DONE Proper Depth Sorting
+    CLOSED: [2016-12-12 Mon 14:38]
 *** TODO Integrate all art assets
 *** TODO Graphical polish
 *** TODO Tuning and balancing

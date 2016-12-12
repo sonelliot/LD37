@@ -70,7 +70,8 @@ public class Cauldron : MonoBehaviour, IContainer
         {
             var renderer = transform.GetChild(i)
                 .gameObject
-                .GetComponent<SpriteRenderer>();
+                .GetComponentsInChildren<SpriteRenderer>()
+                .FirstOrDefault();
 
             var ingredient = this.ingredients
                 .ElementAtOrDefault(i);
@@ -82,7 +83,7 @@ public class Cauldron : MonoBehaviour, IContainer
             else
             {
                 renderer.enabled = true;
-                renderer.color = ingredient.GetColor();
+                renderer.sprite = IngredientSprites.Lookup(ingredient);
             }
         }
     }
