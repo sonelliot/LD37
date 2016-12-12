@@ -5,7 +5,8 @@ public class Brewing : MonoBehaviour
 {
     private float m_elapsed;
     public Recipe recipe;
-    public float tolerance = 0.25f;
+    public float burnFactor = 0.4f;
+    public float burningFactor = 0.15f;
 
     public bool InProgress
     {
@@ -14,12 +15,28 @@ public class Brewing : MonoBehaviour
 
     public bool IsBurnt
     {
-        get { return Progress > 1f + this.tolerance; }
+        get { return Progress > 1f + this.burnFactor; }
+    }
+
+    public bool IsBurning
+    {
+        get { return Progress > 1f + this.burningFactor; }
     }
 
     public bool IsDone
     {
         get { return Progress >= 1f; }
+    }
+
+    public float BurningProgress
+    {
+        get
+        {
+            if (!IsBurning)
+                return 0f;
+
+            return (Progress - 1f) / this.burnFactor;
+        }
     }
 
     public float Progress

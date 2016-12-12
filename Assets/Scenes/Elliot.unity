@@ -2247,15 +2247,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011473670774, guid: 95a4e3184dcd0764db1fe0036533bceb, type: 2}
+      propertyPath: m_Name
+      value: Cauldron (Top)
+      objectReference: {fileID: 0}
     - target: {fileID: 114000012449082230, guid: 95a4e3184dcd0764db1fe0036533bceb,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 1485651357}
-    - target: {fileID: 1000011473670774, guid: 95a4e3184dcd0764db1fe0036533bceb, type: 2}
-      propertyPath: m_Name
-      value: Cauldron (Top)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95a4e3184dcd0764db1fe0036533bceb, type: 2}
   m_IsPrefabParent: 0

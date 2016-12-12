@@ -8,7 +8,15 @@ public class Cauldron : MonoBehaviour, IContainer
     private RecipeBook m_recipeBook;
     private Brewing m_brewing;
     private GameObject m_itemGO;
+    private GameObject m_burningGO;
+    private AudioSource m_bell;
+    private bool m_soundedBell;
     public List<Ingredient> ingredients;
+
+    public Brewing Brewing
+    {
+        get { return m_brewing; }
+    }
 
     public bool IsBrewing
     {
@@ -20,6 +28,8 @@ public class Cauldron : MonoBehaviour, IContainer
         m_recipeBook = GameObject.Find("Recipe Book")
             .GetComponent<RecipeBook>();
 
+        m_bell = GetComponent<AudioSource>();
+
         m_brewing = GetComponent<Brewing>();
 
         m_itemGO = transform.Find("Item").gameObject;
@@ -30,6 +40,16 @@ public class Cauldron : MonoBehaviour, IContainer
         UpdateIngredients();
         UpdateItem();
         UpdateCooking();
+        UpdateBell();
+    }
+
+    private void UpdateBell()
+    {
+        if (m_brewing.IsDone && !m_soundedBell)
+        {
+            m_bell.Play();
+            m_soundedBell = true;
+        }
     }
 
     private void UpdateItem()
@@ -69,8 +89,7 @@ public class Cauldron : MonoBehaviour, IContainer
 
             if (m_brewing.InProgress && m_brewing.IsBurnt)
             {
-                this.ingredients.Clear();
-                m_brewing.Stop();
+                Reset();
             }
         }
     }
@@ -99,6 +118,13 @@ public class Cauldron : MonoBehaviour, IContainer
         }
     }
 
+    public void Reset()
+    {
+        m_brewing.Stop();
+        m_soundedBell = false;
+        this.ingredients.Clear();
+    }
+
     public bool IsFull
     {
         get { return ingredients.Count >= 4; }
@@ -114,9 +140,7 @@ public class Cauldron : MonoBehaviour, IContainer
         if (m_brewing.IsDone && !hand.IsFull)
         {
             hand.Pickup(m_brewing.recipe.potion);
-
-            m_brewing.Stop();
-            this.ingredients.Clear();
+            Reset();
         }
     }
 }

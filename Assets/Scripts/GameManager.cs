@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
+        DOTween.Init(false, true, LogBehaviour.ErrorsOnly);
+
         m_cauldronSound = GetComponent<AudioSource>();
     }
 
