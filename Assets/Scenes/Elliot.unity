@@ -461,6 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potions: 
+  queue: {fileID: 858753769}
 --- !u!1 &244067148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,8 +1016,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1000013535237916, guid: 311968fe03ad32945bf412fadd863d74, type: 2}
-  interval: 1
+  interval: 20
   elapsed: 0
+  limit: 3
 --- !u!1 &969493054
 GameObject:
   m_ObjectHideFlags: 0

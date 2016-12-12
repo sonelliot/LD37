@@ -25,6 +25,17 @@ public class Request : MonoBehaviour
         UpdateIngredients();
     }
 
+    public void Expire()
+    {
+        Destroy(this.gameObject);
+        GameManager.Restart();
+    }
+
+    public void Complete()
+    {
+        Destroy(this.gameObject);
+    }
+
     private void UpdateProgress()
     {
         this.elapsed += Time.deltaTime;

@@ -42,6 +42,26 @@ public class RequestQueue : MonoBehaviour
         UpdateRequests();
     }
 
+    public void Complete(Request request)
+    {
+        m_requests.Remove(request);
+        request.Complete();
+    }
+
+    public void Expire(Request request)
+    {
+        m_requests.Remove(request);
+        request.Expire();
+    }
+
+    public Request Match(Potion potion)
+    {
+        return m_requests
+            .Where(r => r.recipe.potion == potion)
+            .OrderByDescending(r => r.Progress)
+            .FirstOrDefault();
+    }
+
     private void UpdatePositions()
     {
         const float offset = -1.7f;
@@ -70,9 +90,7 @@ public class RequestQueue : MonoBehaviour
         var cull = m_requests.Where(r => r.IsExpired).ToList();
         foreach (var request in cull)
         {
-            var go = request.gameObject;
-            m_requests.Remove(request);
-            Destroy(go);
+            Expire(request);
         }
     }
 
