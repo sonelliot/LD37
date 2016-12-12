@@ -33,7 +33,7 @@ public static class PotionExtensions
         switch (potion)
         {
             case Potion.HealthPotion:
-                player.Health++;
+                player.Heal(1);
                 break;
             default:
                 // nothing!

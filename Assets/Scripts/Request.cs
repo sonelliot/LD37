@@ -36,7 +36,7 @@ public class Request : MonoBehaviour
     public void Expire()
     {
         Destroy(this.gameObject);
-        m_player.Health--;
+        m_player.Hurt(2);
     }
 
     public void Complete()

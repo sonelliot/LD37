@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public AudioSource dropIngredient;
     public AudioSource dropPotion;
     public AudioSource gulp;
+    public AudioSource hurt;
 
     public float speed = 10f;
     public float braking = 0.9f;
@@ -34,6 +35,17 @@ public class Player : MonoBehaviour
             this.currentHealth = Math.Max(
                Math.Min(value, this.maximumHealth), 0);
         }
+    }
+
+    public void Hurt(int amount)
+    {
+        Health -= amount;
+        this.hurt.Play();
+    }
+
+    public void Heal(int amount)
+    {
+        Health += amount;
     }
 
     public void Start()
