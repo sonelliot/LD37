@@ -10,6 +10,11 @@ public class Cauldron : MonoBehaviour, IContainer
     private GameObject m_itemGO;
     public List<Ingredient> ingredients;
 
+    public bool IsBrewing
+    {
+        get { return m_brewing.InProgress; }
+    }
+
     public void Start()
     {
         m_recipeBook = GameObject.Find("Recipe Book")
