@@ -22,8 +22,15 @@
 *** TODO Integrate all art assets
 *** TODO Graphical polish
 *** TODO Tuning and balancing
-*** TODO Mixing potions
+*** DONE Mixing potions
+    CLOSED: [2016-12-12 Mon 11:31]
 *** TODO Create the levels
+**** TODO Level - Tutorial
+**** TODO Level - Brew Plain Potions (2 types)
+**** TODO Level - Brew More Plain Potions (4 types)
+**** TODO Level - Brew Mixed Potions (6 types)
+**** TODO Level - Brew Hard (all types)
+**** TODO Level - Brew Insanely Hard (all types - fast)
 *** TODO Feedback (juiciness):
 **** TODO When request complete
 **** TODO When player walks

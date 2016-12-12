@@ -1,10 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public static class GameManager
+public class GameManager : MonoBehaviour
 {
-    public static void Restart()
+    public Player player;
+
+    public void Restart()
     {
         Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void Update()
+    {
+        if (player.currentHealth <= 0)
+        {
+            Restart();
+        }
     }
 }

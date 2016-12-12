@@ -5,6 +5,8 @@ using System.Linq;
 
 public class Request : MonoBehaviour
 {
+    private Player m_player;
+
     public Recipe recipe;
     public float timeout = 60f;
     public float elapsed = 0f;
@@ -19,6 +21,12 @@ public class Request : MonoBehaviour
         get { return this.elapsed / this.timeout; }
     }
 
+    public void Start()
+    {
+        m_player = GameObject.Find("Player")
+            .GetComponent<Player>();
+    }
+
     public void Update()
     {
         UpdateProgress();
@@ -28,7 +36,7 @@ public class Request : MonoBehaviour
     public void Expire()
     {
         Destroy(this.gameObject);
-        GameManager.Restart();
+        m_player.Health--;
     }
 
     public void Complete()

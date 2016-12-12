@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public class Player : MonoBehaviour
@@ -10,6 +11,19 @@ public class Player : MonoBehaviour
     public float speed = 10f;
     public float braking = 0.9f;
     public float pickupDistance = 2.0f;
+
+    public int currentHealth = 3;
+    public int maximumHealth = 3;
+
+    public int Health
+    {
+        get { return this.currentHealth; }
+        set
+        {
+            this.currentHealth = Math.Max(
+               Math.Min(value, this.maximumHealth), 0);
+        }
+    }
 
     public void Start()
     {
@@ -28,18 +42,32 @@ public class Player : MonoBehaviour
 
     private void UpdateHands()
     {
+        bool secondary = Input.GetKey(KeyCode.LeftShift);
+
         if (Input.GetMouseButtonDown(0))
         {
-            UpdateHand(m_left);
+            UpdateHand(m_left, secondary);
         }
 
         if (Input.GetMouseButtonDown(1))
         {
-            UpdateHand(m_right);
+            UpdateHand(m_right, secondary);
         }
     }
 
-    private void UpdateHand(Hand hand)
+    private void UpdateHand(Hand hand, bool secondary)
+    {
+        if (secondary)
+        {
+            UpdateHandSecondary(hand);
+        }
+        else
+        {
+            UpdateHandPrimary(hand);
+        }
+    }
+
+    private void UpdateHandPrimary(Hand hand)
     {
         var containers = new IContainer[]
         {
@@ -57,10 +85,17 @@ public class Player : MonoBehaviour
                 return;
             }
         }
+    }
 
+    private void UpdateHandSecondary(Hand hand)
+    {
         if (hand.Holding<Ingredient>())
         {
             hand.Discard();
+        }
+        else if (hand.Holding<Potion>())
+        {
+            hand.Give<Potion>().Apply(this);
         }
     }
 
