@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 849b0e1dd7e7cb548adc0d64cd74f140
-timeCreated: 1481502405
+guid: 4147be81675147947b9f761ed6aed3ad
+timeCreated: 1481503119
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: wizard_0
-    21300002: wizard_1
-    21300004: wizard_2
-    21300006: wizard_3
+    21300000: chest_0
+    21300002: chest_1
+    21300004: chest_2
+    21300006: chest_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,52 +57,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_0
+      name: chest_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 21
-        height: 28
+        width: 30
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: wizard_1
+      name: chest_1
       rect:
         serializedVersion: 2
-        x: 21
+        x: 30
         y: 0
-        width: 21
-        height: 28
+        width: 30
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: wizard_2
+      name: chest_2
       rect:
         serializedVersion: 2
-        x: 42
+        x: 60
         y: 0
-        width: 21
-        height: 28
+        width: 30
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: wizard_3
+      name: chest_3
       rect:
         serializedVersion: 2
-        x: 63
+        x: 90
         y: 0
-        width: 21
-        height: 28
+        width: 30
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
