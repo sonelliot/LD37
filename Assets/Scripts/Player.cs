@@ -4,9 +4,15 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
+    private SpriteRenderer m_renderer;
     private Rigidbody2D m_body;
     private Hand m_left;
     private Hand m_right;
+
+    public Sprite down;
+    public Sprite up;
+    public Sprite left;
+    public Sprite right;
 
     public float speed = 10f;
     public float braking = 0.9f;
@@ -28,6 +34,7 @@ public class Player : MonoBehaviour
     public void Start()
     {
         m_body = GetComponent<Rigidbody2D>();
+        m_renderer = GetComponent<SpriteRenderer>();
 
         var hands = GetComponentsInChildren<Hand>();
         m_left  = hands[0];
@@ -135,9 +142,24 @@ public class Player : MonoBehaviour
         }
     }
 
+    private Sprite FacingSprite(Vector2 direction)
+    {
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            var side = Mathf.Sign(direction.x);
+            return side > 0 ? this.right : this.left;
+        }
+        else
+        {
+            var side = Mathf.Sign(direction.y);
+            return side > 0 ? this.up : this.down;
+        }
+    }
+
     private void Move(Vector2 direction)
     {
         m_body.AddForce(this.speed * direction);
+        m_renderer.sprite = FacingSprite(direction);
     }
 
     private void Stop()
