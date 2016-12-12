@@ -103,7 +103,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013902540276, guid: 95a4e3184dcd0764db1fe0036533bceb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4000013902540276, guid: 95a4e3184dcd0764db1fe0036533bceb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -227,7 +227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013902540276, guid: 95a4e3184dcd0764db1fe0036533bceb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4000013902540276, guid: 95a4e3184dcd0764db1fe0036533bceb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -383,11 +383,51 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.000000023841858, y: -0.033840276}
+  serializedVersion: 2
+  m_Size: {x: 0.24291825, y: 0.14758216}
+--- !u!114 &227775340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227775338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c0d4f3bebae23439395331b78c13f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamic: 0
+--- !u!61 &227775341
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227775338}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.001471281, y: 0.008827972}
   serializedVersion: 2
-  m_Size: {x: 0.29, y: 0.28}
+  m_Size: {x: 0.25763127, y: 0.2623441}
+--- !u!114 &227775346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227775338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8023edd1bb68f374ab458e093de45f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {x: 0, y: 0, z: 0}
+  factor: 1.05
+  player: {fileID: 1485651357}
 --- !u!1 &243487496
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,6 +439,8 @@ GameObject:
   - 212: {fileID: 243487498}
   - 114: {fileID: 243487500}
   - 61: {fileID: 243487497}
+  - 114: {fileID: 243487501}
+  - 114: {fileID: 243487502}
   m_Layer: 0
   m_Name: Request Chest
   m_TagString: Untagged
@@ -415,11 +457,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0014712334, y: -0.020598222}
   serializedVersion: 2
-  m_Size: {x: 0.24, y: 0.21}
+  m_Size: {x: 0.23117211, y: 0.16291824}
 --- !u!212 &243487498
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -483,6 +525,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potions: 
   queue: {fileID: 858753769}
+--- !u!114 &243487501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243487496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c0d4f3bebae23439395331b78c13f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamic: 0
+--- !u!114 &243487502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243487496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8023edd1bb68f374ab458e093de45f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {x: 0, y: 0, z: 0}
+  factor: 1.05
+  player: {fileID: 1485651357}
 --- !u!1 &395171535
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +639,8 @@ GameObject:
   - 212: {fileID: 401911633}
   - 114: {fileID: 401911632}
   - 61: {fileID: 401911631}
+  - 114: {fileID: 401911635}
+  - 114: {fileID: 401911636}
   m_Layer: 0
   m_Name: Ingredient Station (Purple)
   m_TagString: Untagged
@@ -587,11 +657,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.008827782}
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.24}
+  m_Size: {x: 0.25291833, y: 0.16349201}
 --- !u!114 &401911632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,6 +720,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+--- !u!114 &401911635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401911630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c0d4f3bebae23439395331b78c13f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamic: 0
+--- !u!114 &401911636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401911630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8023edd1bb68f374ab458e093de45f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {x: 0, y: 0, z: 0}
+  factor: 1.05
+  player: {fileID: 1485651357}
 --- !u!1 &493784085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,6 +1190,8 @@ GameObject:
   - 212: {fileID: 1029397272}
   - 114: {fileID: 1029397271}
   - 61: {fileID: 1029397270}
+  - 114: {fileID: 1029397274}
+  - 114: {fileID: 1029397275}
   m_Layer: 0
   m_Name: Ingredient Station (Blue)
   m_TagString: Untagged
@@ -1110,11 +1208,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.008827782}
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.24}
+  m_Size: {x: 0.25291833, y: 0.16349201}
 --- !u!114 &1029397271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,6 +1271,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!114 &1029397274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029397269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c0d4f3bebae23439395331b78c13f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamic: 0
+--- !u!114 &1029397275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029397269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8023edd1bb68f374ab458e093de45f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {x: 0, y: 0, z: 0}
+  factor: 1.05
+  player: {fileID: 1485651357}
 --- !u!1 &1056876405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,11 +1534,37 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0058852434, y: -0.058852315}
   serializedVersion: 2
-  m_Size: {x: 0.34, y: 0.33}
+  m_Size: {x: 0.32234436, y: 0.15344349}
+--- !u!114 &1261140032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1261140030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c0d4f3bebae23439395331b78c13f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamic: 0
+--- !u!114 &1261140033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1261140030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8023edd1bb68f374ab458e093de45f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {x: 0, y: 0, z: 0}
+  factor: 1.05
+  player: {fileID: 1485651357}
 --- !u!1 &1372473150 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011473670774, guid: 95a4e3184dcd0764db1fe0036533bceb,
@@ -1429,11 +1579,51 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.000000023841858, y: -0.033840276}
+  serializedVersion: 2
+  m_Size: {x: 0.24291825, y: 0.14758216}
+--- !u!114 &1372473152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372473150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c0d4f3bebae23439395331b78c13f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamic: 0
+--- !u!61 &1372473153
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372473150}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.001471281, y: 0.008827972}
   serializedVersion: 2
-  m_Size: {x: 0.29, y: 0.28}
+  m_Size: {x: 0.25763127, y: 0.2623441}
+--- !u!114 &1372473154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372473150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8023edd1bb68f374ab458e093de45f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {x: 0, y: 0, z: 0}
+  factor: 1.05
+  player: {fileID: 1485651357}
 --- !u!1 &1485651354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1636,7 @@ GameObject:
   - 114: {fileID: 1485651357}
   - 50: {fileID: 1485651358}
   - 61: {fileID: 1485651359}
+  - 114: {fileID: 1485651360}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1481,7 +1672,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 849b0e1dd7e7cb548adc0d64cd74f140, type: 3}
   m_Color: {r: 1, g: 0.9055, b: 0.541, a: 1}
   m_FlipX: 0
@@ -1518,7 +1709,7 @@ MonoBehaviour:
   right: {fileID: 21300004, guid: 849b0e1dd7e7cb548adc0d64cd74f140, type: 3}
   speed: 30
   braking: 0.9
-  pickupDistance: 2
+  pickupDistance: 1.5
   currentHealth: 3
   maximumHealth: 3
 --- !u!50 &1485651358
@@ -1552,6 +1743,18 @@ BoxCollider2D:
   m_Offset: {x: -0.0038789273, y: -0.040728774}
   serializedVersion: 2
   m_Size: {x: 0.15569495, y: 0.14423726}
+--- !u!114 &1485651360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485651354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c0d4f3bebae23439395331b78c13f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamic: 1
 --- !u!1 &1530214497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,6 +2115,8 @@ GameObject:
   - 212: {fileID: 1907955731}
   - 114: {fileID: 1907955730}
   - 61: {fileID: 1907955729}
+  - 114: {fileID: 1907955733}
+  - 114: {fileID: 1907955734}
   m_Layer: 0
   m_Name: Ingredient Station (Red)
   m_TagString: Untagged
@@ -1928,11 +2133,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.008827782}
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.24}
+  m_Size: {x: 0.25291833, y: 0.16349201}
 --- !u!114 &1907955730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1991,6 +2196,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &1907955733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1907955728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c0d4f3bebae23439395331b78c13f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamic: 0
+--- !u!114 &1907955734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1907955728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8023edd1bb68f374ab458e093de45f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {x: 0, y: 0, z: 0}
+  factor: 1.05
+  player: {fileID: 1485651357}
 --- !u!1 &2067924713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,6 +2233,8 @@ GameObject:
   - 212: {fileID: 2067924716}
   - 114: {fileID: 2067924715}
   - 61: {fileID: 2067924714}
+  - 114: {fileID: 2067924718}
+  - 114: {fileID: 2067924719}
   m_Layer: 0
   m_Name: Ingredient Station (Green)
   m_TagString: Untagged
@@ -2018,11 +2251,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.008827782}
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.24}
+  m_Size: {x: 0.25291833, y: 0.16349201}
 --- !u!114 &2067924715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2081,3 +2314,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!114 &2067924718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067924713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c0d4f3bebae23439395331b78c13f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dynamic: 0
+--- !u!114 &2067924719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2067924713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8023edd1bb68f374ab458e093de45f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {x: 0, y: 0, z: 0}
+  factor: 1.05
+  player: {fileID: 1485651357}

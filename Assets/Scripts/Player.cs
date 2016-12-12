@@ -8,15 +8,16 @@ public class Player : MonoBehaviour
     private Rigidbody2D m_body;
     private Hand m_left;
     private Hand m_right;
+    private RaycastHit2D m_hit;
 
     public Sprite down;
     public Sprite up;
     public Sprite left;
     public Sprite right;
+    public Interactable target;
 
     public float speed = 10f;
     public float braking = 0.9f;
-    public float pickupDistance = 2.0f;
 
     public int currentHealth = 3;
     public int maximumHealth = 3;
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
     public void Update()
     {
         UpdateMovement();
+        UpdateInteractable();
         UpdateHands();
     }
 
@@ -106,21 +108,38 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void UpdateInteractable()
+    {
+        var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        m_hit = Physics2D.Raycast(position, Vector2.zero);
+
+        if (m_hit.collider != null &&
+            m_hit.collider.GetComponent<Interactable>())
+        {
+            this.target = m_hit.collider.GetComponent<Interactable>();
+        }
+        else
+        {
+            this.target = null;
+        }
+    }
+
     private T ClickOnContainer<T>()
         where T: class, IContainer
     {
-        var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var hit = Physics2D.Raycast(position, Vector2.zero);
-
-        if (hit.collider != null &&
-            hit.collider.GetComponent<T>() != null)
+        if (m_hit.collider != null &&
+            m_hit.collider.GetComponent<T>() != null)
         {
             var distance = Vector3.Distance(
-                this.transform.position, hit.collider.transform.position);
+                this.transform.position, m_hit.collider.transform.position);
 
-            if (distance < this.pickupDistance)
+            var interactable = m_hit.collider.GetComponent<Interactable>();
+
+            var radius = interactable != null ? interactable.radius : 1.5f;
+
+            if (distance < radius)
             {
-                return hit.collider.GetComponent<T>();
+                return m_hit.collider.GetComponent<T>();
             }
         }
 
