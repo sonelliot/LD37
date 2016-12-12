@@ -23,7 +23,7 @@ public class Hand : MonoBehaviour
         {
             var potion = (Potion)this.thing;
             m_renderer.enabled = true;
-            m_renderer.color = potion.GetColor();
+            m_renderer.sprite = PotionSprites.Lookup(potion);
         }
         else
         {

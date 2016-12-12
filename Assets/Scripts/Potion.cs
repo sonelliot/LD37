@@ -6,9 +6,10 @@ public enum Potion
 {
     Unknown,
     HealthPotion,
-    ManaPotion,
-    StaminaPotion,
-    LuckPotion
+    MagicPotion,
+    SpeedPotion,
+    LuckPotion,
+    YellowPotion
 }
 
 public static class PotionExtensions
@@ -17,10 +18,11 @@ public static class PotionExtensions
     {
         switch (potion)
         {
-            case Potion.HealthPotion:   return Colors.red;
-            case Potion.StaminaPotion:  return Colors.green;
-            case Potion.ManaPotion:     return Colors.blue;
-            case Potion.LuckPotion:     return Colors.purple;
+            case Potion.HealthPotion: return Colors.red;
+            case Potion.SpeedPotion:  return Colors.green;
+            case Potion.MagicPotion:  return Colors.blue;
+            case Potion.LuckPotion:   return Colors.purple;
+            case Potion.YellowPotion: return Colors.yellow;
             default:
                 return Color.white;
         }
