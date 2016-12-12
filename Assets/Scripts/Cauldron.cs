@@ -9,8 +9,10 @@ public class Cauldron : MonoBehaviour, IContainer
     private Brewing m_brewing;
     private GameObject m_itemGO;
     private GameObject m_burningGO;
-    private AudioSource m_bell;
     private bool m_soundedBell;
+
+    public AudioSource bell;
+    public AudioSource smoke;
     public List<Ingredient> ingredients;
 
     public Brewing Brewing
@@ -28,7 +30,7 @@ public class Cauldron : MonoBehaviour, IContainer
         m_recipeBook = GameObject.Find("Recipe Book")
             .GetComponent<RecipeBook>();
 
-        m_bell = GetComponent<AudioSource>();
+        var audio = GetComponentsInChildren<AudioSource>();
 
         m_brewing = GetComponent<Brewing>();
 
@@ -47,7 +49,7 @@ public class Cauldron : MonoBehaviour, IContainer
     {
         if (m_brewing.IsDone && !m_soundedBell)
         {
-            m_bell.Play();
+            bell.Play();
             m_soundedBell = true;
         }
     }
@@ -89,6 +91,7 @@ public class Cauldron : MonoBehaviour, IContainer
 
             if (m_brewing.InProgress && m_brewing.IsBurnt)
             {
+                smoke.Play();
                 Reset();
             }
         }
