@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipe: {fileID: 189074325}
   timeout: 60
+  elapsed: 0
 --- !u!1 &76589241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,6 +2368,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2046606812}
+  - 114: {fileID: 2046606813}
   m_Layer: 0
   m_Name: Progress
   m_TagString: Untagged
@@ -2388,3 +2390,14 @@ Transform:
   - {fileID: 1553015163}
   m_Father: {fileID: 72266594}
   m_RootOrder: 4
+--- !u!114 &2046606813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046606811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b74a7022bc93a3449eed7d25d84d1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
