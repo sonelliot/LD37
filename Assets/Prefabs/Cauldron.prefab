@@ -614,6 +614,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bell: {fileID: 82000010931415226}
   smoke: {fileID: 82000010374904220}
+  take: {fileID: 0}
+  put: {fileID: 0}
   ingredients: 
 --- !u!114 &114000011250988400
 MonoBehaviour:

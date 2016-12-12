@@ -13,6 +13,8 @@ public class Cauldron : MonoBehaviour, IContainer
 
     public AudioSource bell;
     public AudioSource smoke;
+    public AudioSource take;
+    public AudioSource put;
     public List<Ingredient> ingredients;
 
     public Brewing Brewing
@@ -138,12 +140,14 @@ public class Cauldron : MonoBehaviour, IContainer
         if (!IsFull && hand.IsFull && hand.Holding<Ingredient>())
         {
             this.ingredients.Add(hand.Give<Ingredient>());
+            this.put.Play();
         }
 
         if (m_brewing.IsDone && !hand.IsFull)
         {
             hand.Pickup(m_brewing.recipe.potion);
             Reset();
+            this.take.Play();
         }
     }
 }

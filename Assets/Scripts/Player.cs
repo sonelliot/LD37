@@ -16,6 +16,10 @@ public class Player : MonoBehaviour
     public Sprite right;
     public Interactable target;
 
+    public AudioSource dropIngredient;
+    public AudioSource dropPotion;
+    public AudioSource gulp;
+
     public float speed = 10f;
     public float braking = 0.9f;
 
@@ -94,17 +98,26 @@ public class Player : MonoBehaviour
                 return;
             }
         }
+
+        if (hand.Holding<Ingredient>())
+        {
+            hand.Discard();
+            this.dropIngredient.Play();
+        }
+
+        if (hand.Holding<Potion>())
+        {
+            hand.Discard();
+            this.dropPotion.Play();
+        }
     }
 
     private void UpdateHandSecondary(Hand hand)
     {
-        if (hand.Holding<Ingredient>())
-        {
-            hand.Discard();
-        }
-        else if (hand.Holding<Potion>())
+        if (hand.Holding<Potion>())
         {
             hand.Give<Potion>().Apply(this);
+            this.gulp.Play();
         }
     }
 
