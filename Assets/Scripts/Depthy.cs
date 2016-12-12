@@ -4,6 +4,7 @@ using System.Collections;
 public class Depthy : MonoBehaviour
 {
     public bool dynamic = false;
+    public float scale = 10f;
 
     public void Start()
     {
@@ -26,7 +27,7 @@ public class Depthy : MonoBehaviour
 
     private Vector3 CalculateDepth(Vector3 posn)
     {
-        var z = -1f * (1f - ((posn.y + 3f) / 6f));
+        var z = -this.scale * (1f - ((posn.y + 3f) / 6f));
         return new Vector3(posn.x, posn.y, z);
     }
 }

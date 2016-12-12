@@ -29,13 +29,19 @@ public class Cauldron : MonoBehaviour, IContainer
 
     private void UpdateItem()
     {
-        if (m_brewing.IsDone)
+        if (m_brewing.InProgress)
         {
             m_itemGO.SetActive(true);
+
             var renderer = m_itemGO.GetComponent<SpriteRenderer>();
             renderer.color = m_brewing.recipe.potion.GetColor();
+
+            const float offset = -0.06f;
+
+            m_itemGO.transform.localPosition = new Vector3(
+                0f, Mathf.Min(0f, offset * (1f - m_brewing.Progress)), 0f);
         }
-        else
+        else if (!m_brewing.IsDone)
         {
             m_itemGO.SetActive(false);
         }
