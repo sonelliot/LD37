@@ -17,7 +17,7 @@ public class Hand : MonoBehaviour
         {
             var ingredient = (Ingredient)this.thing;
             m_renderer.enabled = true;
-            m_renderer.color = ingredient.GetColor();
+            m_renderer.sprite = IngredientSprites.Lookup(ingredient);
         }
         else if (this.thing is Potion)
         {
