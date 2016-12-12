@@ -318,17 +318,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 212000012207672248, guid: 3d4a9ebad4bd55b43812f8f7ba83749f,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212000012207672248, guid: 3d4a9ebad4bd55b43812f8f7ba83749f,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c29d32ee1869ff54c922e1a9fcb8d69d,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d4a9ebad4bd55b43812f8f7ba83749f, type: 2}
   m_IsPrefabParent: 0
@@ -543,8 +532,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 244067150}
   - 212: {fileID: 244067149}
-  - 61: {fileID: 244067151}
   - 114: {fileID: 244067152}
+  - 61: {fileID: 244067151}
   m_Layer: 0
   m_Name: Ingredient Station (Blue)
   m_TagString: Untagged
@@ -581,7 +570,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4147be81675147947b9f761ed6aed3ad, type: 3}
   m_Color: {r: 0.4166029, g: 0.6708224, b: 0.83823526, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -592,8 +581,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 244067148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.52, y: -1.05, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -5.31, y: -1, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -611,7 +600,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.3, y: 0.24}
 --- !u!114 &244067152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,8 +1325,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 969493056}
   - 212: {fileID: 969493055}
-  - 61: {fileID: 969493057}
   - 114: {fileID: 969493058}
+  - 61: {fileID: 969493057}
   m_Layer: 0
   m_Name: Ingredient Station (Green)
   m_TagString: Untagged
@@ -1374,7 +1363,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4147be81675147947b9f761ed6aed3ad, type: 3}
   m_Color: {r: 0.5280882, g: 0.75, b: 0.37274998, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1385,8 +1374,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969493054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.52, y: 1.13, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -5.31, y: 1.18, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1404,7 +1393,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.3, y: 0.24}
 --- !u!114 &969493058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1559,7 +1548,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160351280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.08, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1651,8 +1640,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1344156194}
   - 212: {fileID: 1344156193}
-  - 61: {fileID: 1344156195}
   - 114: {fileID: 1344156196}
+  - 61: {fileID: 1344156195}
   m_Layer: 0
   m_Name: Ingredient Station (Purple)
   m_TagString: Untagged
@@ -1689,7 +1678,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4147be81675147947b9f761ed6aed3ad, type: 3}
   m_Color: {r: 0.83823526, g: 0.4166029, b: 0.7514287, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1700,8 +1689,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1344156192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.52, y: -3.05, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -5.31, y: -3, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1719,7 +1708,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.3, y: 0.24}
 --- !u!114 &1344156196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1853,8 +1842,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1503331305}
   - 212: {fileID: 1503331306}
-  - 61: {fileID: 1503331307}
   - 114: {fileID: 1503331308}
+  - 61: {fileID: 1503331307}
   m_Layer: 0
   m_Name: Ingredient Station (Red)
   m_TagString: Untagged
@@ -1869,8 +1858,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1503331304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.52, y: 3.13, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -5.31, y: 3.18, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1904,7 +1893,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f861fcdf02981504e9cdbed1ee0d5015, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4147be81675147947b9f761ed6aed3ad, type: 3}
   m_Color: {r: 1, g: 0.49699998, b: 0.49699998, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1921,7 +1910,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.3, y: 0.24}
 --- !u!114 &1503331308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2347,17 +2336,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 212000012207672248, guid: 3d4a9ebad4bd55b43812f8f7ba83749f,
-        type: 2}
-      propertyPath: m_SortingOrder
+    - target: {fileID: 1000013429345336, guid: 3d4a9ebad4bd55b43812f8f7ba83749f, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 212000012207672248, guid: 3d4a9ebad4bd55b43812f8f7ba83749f,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c29d32ee1869ff54c922e1a9fcb8d69d,
-        type: 3}
+    - target: {fileID: 1000012800108454, guid: 3d4a9ebad4bd55b43812f8f7ba83749f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012307139232, guid: 3d4a9ebad4bd55b43812f8f7ba83749f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010840118394, guid: 3d4a9ebad4bd55b43812f8f7ba83749f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010441565476, guid: 3d4a9ebad4bd55b43812f8f7ba83749f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d4a9ebad4bd55b43812f8f7ba83749f, type: 2}
   m_IsPrefabParent: 0
