@@ -99,6 +99,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 911440698}
   - 212: {fileID: 911440699}
+  - 114: {fileID: 911440700}
+  - 114: {fileID: 911440701}
   m_Layer: 0
   m_Name: Character Sprite
   m_TagString: Untagged
@@ -152,6 +154,35 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &911440700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911440697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a32f9a76775e64bb90f0b6f62841f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  down: {fileID: 21300000, guid: 849b0e1dd7e7cb548adc0d64cd74f140, type: 3}
+  up: {fileID: 21300002, guid: 849b0e1dd7e7cb548adc0d64cd74f140, type: 3}
+  left: {fileID: 21300006, guid: 849b0e1dd7e7cb548adc0d64cd74f140, type: 3}
+  right: {fileID: 21300004, guid: 849b0e1dd7e7cb548adc0d64cd74f140, type: 3}
+--- !u!114 &911440701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911440697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aafa6875450d8d42bf4867643fc6846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  omni: {fileID: 911440700}
+  movement: {fileID: 1822337465}
+  renderer: {fileID: 911440699}
 --- !u!1 &920676344
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +282,7 @@ GameObject:
   - 114: {fileID: 1822337464}
   - 114: {fileID: 1822337466}
   - 54: {fileID: 1822337463}
+  - 75: {fileID: 1822337467}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -279,8 +311,8 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1822337461}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 10
+  m_Drag: 1
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -300,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 1822337465}
   body: {fileID: 1822337463}
+  constant: {fileID: 1822337467}
 --- !u!114 &1822337465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  speed: 400
+  speed: 10
   braking: 0.95
 --- !u!114 &1822337466
 MonoBehaviour:
@@ -326,6 +359,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1822337465}
+--- !u!75 &1822337467
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1822337461}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1 &2099602402
 GameObject:
   m_ObjectHideFlags: 0
