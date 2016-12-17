@@ -11,5 +11,6 @@ namespace WizardWorkshop
         public Vector3 direction = Vector3.zero;
         public float speed = 1.0f;
         public float braking = 1.0f;
+        public float stopMagnitude = 0.1f;
     }
 }
